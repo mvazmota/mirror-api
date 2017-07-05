@@ -9,7 +9,8 @@ class Lists extends Controller
 {
     public function getLists()
     {
-        $lists = ShoppingList::with('products')->get();
+        $lists = ShoppingList::with('products')
+            ->get();
 
         $response = response($lists)
             ->header('Content-Type', 'application/json');

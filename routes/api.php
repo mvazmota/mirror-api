@@ -37,6 +37,10 @@ Route::group(['prefix'=>'task'], function(){
     Route::get('', ['uses' => 'Tasks@getTasks']);
 });
 
+Route::group(['prefix'=>'calendar'], function(){
+    Route::get('', ['uses' => 'Calendars@getCalendars']);
+});
+
 Route::group(['prefix'=>'playlist'], function(){
     Route::get('{id}', ['uses' => 'Playlists@getPlaylist']);
 });
